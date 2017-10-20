@@ -1,0 +1,60 @@
+\begin{thebibliography}{10}
+
+\bibitem{sitti2015biomedical}
+Metin Sitti, Hakan Ceylan, Wenqi Hu, Joshua Giltinan, Mehmet Turan, Sehyuk Yim,
+  and Eric Diller.
+\newblock Biomedical applications of untethered mobile milli/microrobots.
+\newblock {\em Proceedings of the IEEE}, 103(2):205--224, 2015.
+
+\bibitem{feigel1989theory}
+MV~Feigel’Man, VB~Geshkenbein, AI~Larkin, and VM~Vinokur.
+\newblock Theory of collective flux creep.
+\newblock {\em Physical review letters}, 63(20):2303, 1989.
+
+\bibitem{ONOGI1989991}
+Toshiyuki Onogi, Tsuneo Ichiguchi, and Toshiyuki Aida.
+\newblock Power-law dissipative behavior in high-tc superconductor.
+\newblock {\em Solid State Communications}, 69(10):991 -- 993, 1989.
+
+\bibitem{0022-3727-3-4-308}
+W~T Norris.
+\newblock Calculation of hysteresis losses in hard superconductors carrying ac:
+  isolated conductors and edges of thin sheets.
+\newblock {\em Journal of Physics D: Applied Physics}, 3(4):489, 1970.
+
+\bibitem{brambilla2006development}
+Roberto Brambilla, Francesco Grilli, and Luciano Martini.
+\newblock Development of an edge-element model for ac loss computation of
+  high-temperature superconductors.
+\newblock {\em Superconductor Science and Technology}, 20(1):16, 2006.
+
+\bibitem{leclerc2016artificial}
+J~Leclerc, L~Makong Hell, C~Lorin, and PJ~Masson.
+\newblock Artificial neural networks for ac losses prediction in
+  superconducting round filaments.
+\newblock {\em Superconductor Science and Technology}, 29(6):065008, 2016.
+
+\bibitem{simpson2001simple}
+James~C Simpson, John~E Lane, Christopher~D Immer, and Robert~C Youngquist.
+\newblock Simple analytic expressions for the magnetic field of a circular
+  current loop.
+\newblock {\em NASA Technical report}, 2001.
+
+\bibitem{lagarias1998convergence}
+Jeffrey~C Lagarias, James~A Reeds, Margaret~H Wright, and Paul~E Wright.
+\newblock Convergence properties of the nelder--mead simplex method in low
+  dimensions.
+\newblock {\em SIAM Journal on optimization}, 9(1):112--147, 1998.
+
+\bibitem{zhang2003angular}
+Guo~Min Zhang, Liang~Zhen Lin, Li~Ye Xiao, and Yun~Jia Yu.
+\newblock The angular dependence of ac losses in bscco/ag tapes under ac
+  magnetic fields and ac transport currents.
+\newblock {\em Cryogenics}, 43(1):25--29, 2003.
+
+\bibitem{bean1962magnetization}
+Co~Po Bean.
+\newblock Magnetization of hard superconductors.
+\newblock {\em Physical Review Letters}, 8(6):250, 1962.
+
+\end{thebibliography}
