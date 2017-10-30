@@ -34,11 +34,24 @@ J~Leclerc, L~Makong Hell, C~Lorin, and PJ~Masson.
   superconducting round filaments.
 \newblock {\em Superconductor Science and Technology}, 29(6):065008, 2016.
 
+\bibitem{WinNT}
+{Cryomech INC}.
+\newblock , {S}yracuse, {N}ew {Y}ork 13211, {USA}.
+\newblock {\em http://www.cryomech.com/cryorefrigerators}.
+
 \bibitem{simpson2001simple}
 James~C Simpson, John~E Lane, Christopher~D Immer, and Robert~C Youngquist.
 \newblock Simple analytic expressions for the magnetic field of a circular
   current loop.
 \newblock {\em NASA Technical report}, 2001.
+
+\bibitem{linares2016design}
+Rafael Linares, K{\'e}vin Berger, Melika Hinaje, Bruno Douine, and Jean
+  L{\'e}v{\^e}que.
+\newblock Design of a vector magnet generating up to 3 t with three-axis
+  orientation.
+\newblock {\em IEEE Transactions on Applied Superconductivity}, 26(3):1--5,
+  2016.
 
 \bibitem{lagarias1998convergence}
 Jeffrey~C Lagarias, James~A Reeds, Margaret~H Wright, and Paul~E Wright.

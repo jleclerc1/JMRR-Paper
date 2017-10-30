@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  20 OCT 2017 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  30 OCT 2017 17:15
 entering extended mode
 **./JMRR_paper_Main_File.tex
 (JMRR_paper_Main_File.tex
@@ -209,6 +209,14 @@ Package: cite 2015/02/27  v 5.5
 )
 (C:\Users\jleclerc\AppData\Roaming\MiKTeX\2.9\tex\latex\was\gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(C:\Users\jleclerc\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip51
+\enit@outerparindent=\dimen135
+\enit@toks=\toks22
+\enit@inbox=\box57
+\enitdp@description=\count119
 ) (JMRR_paper_Main_File.aux)
 \openout1 = `JMRR_paper_Main_File.aux'.
 
@@ -227,17 +235,17 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (C:\Users\jleclerc\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen135
-\scratchbox=\box57
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen136
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count120
+\scratchdimen=\dimen136
+\scratchbox=\box58
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen137
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks24
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO)
 
@@ -312,22 +320,22 @@ File: fig_system_v2.png Graphic file (type png)
 Package pdftex.def Info: fig_system_v2.png used on input line 62.
 (pdftex.def)             Requested size: 255.2497pt x 263.96492pt.
  [1{C:/Users/jleclerc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./fig_system_v2.png>]
-[2] <coil_system.png, id=26, 602.25pt x 443.256pt>
+[2] [3] <coil_system.png, id=33, 602.25pt x 443.256pt>
 File: coil_system.png Graphic file (type png)
  <use coil_system.png>
-Package pdftex.def Info: coil_system.png used on input line 128.
+Package pdftex.def Info: coil_system.png used on input line 142.
 (pdftex.def)             Requested size: 255.2497pt x 187.86389pt.
- [3]
-<method.png, id=33, 558.28575pt x 436.029pt>
+ [4 <./coil_system.png>]
+<method.png, id=40, 558.28575pt x 436.029pt>
 File: method.png Graphic file (type png)
  <use method.png>
-Package pdftex.def Info: method.png used on input line 169.
+Package pdftex.def Info: method.png used on input line 183.
 (pdftex.def)             Requested size: 255.2497pt x 199.35156pt.
- [4 <./coil_system.png>] [5 <./method.png>]
-<SimResults.png, id=43, 520.94624pt x 486.01575pt>
+ [5 <./method.png>]
+<SimResults.png, id=45, 520.94624pt x 486.01575pt>
 File: SimResults.png Graphic file (type png)
  <use SimResults.png>
-Package pdftex.def Info: SimResults.png used on input line 204.
+Package pdftex.def Info: SimResults.png used on input line 218.
 (pdftex.def)             Requested size: 255.2497pt x 238.13496pt.
  (JMRR_paper_Main_File.bbl
 Missing character: There is no â in font cmr10!
@@ -335,13 +343,13 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
  [6 <./SimResults.png>]) [7] (JMRR_paper_Main_File.aux) ) 
 Here is how much of TeX's memory you used:
- 3193 strings out of 493333
- 40766 string characters out of 3139185
- 117862 words of memory out of 3000000
- 6661 multiletter control sequences out of 15000+200000
+ 3474 strings out of 493333
+ 45564 string characters out of 3139185
+ 123993 words of memory out of 3000000
+ 6938 multiletter control sequences out of 15000+200000
  16380 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,17n,26p,1071b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,17n,26p,1065b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
@@ -356,7 +364,7 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTe
 y5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on JMRR_paper_Main_File.pdf (7 pages, 910113 bytes).
+Output written on JMRR_paper_Main_File.pdf (7 pages, 908503 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
