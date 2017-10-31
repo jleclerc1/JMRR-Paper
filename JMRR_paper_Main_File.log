@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  31 OCT 2017 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  31 OCT 2017 16:39
 entering extended mode
 **./JMRR_paper_Main_File.tex
 (JMRR_paper_Main_File.tex
@@ -320,28 +320,28 @@ File: fig_system_v2.png Graphic file (type png)
 Package pdftex.def Info: fig_system_v2.png used on input line 62.
 (pdftex.def)             Requested size: 255.2497pt x 263.96492pt.
  [1{C:/Users/jleclerc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./fig_system_v2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
-\OT1/cmr/m/n/10 ap-pli-ca-tion. A method to de-sign su-per-con-duct-ing
- []
 
-[2] [3] <coil_system.png, id=34, 602.25pt x 443.256pt>
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 86.
+
+[2] [3] <coil_system.png, id=33, 602.25pt x 443.256pt>
 File: coil_system.png Graphic file (type png)
  <use coil_system.png>
-Package pdftex.def Info: coil_system.png used on input line 139.
+Package pdftex.def Info: coil_system.png used on input line 143.
 (pdftex.def)             Requested size: 255.2497pt x 187.86389pt.
- [4 <./coil_system.png>]
-<method.png, id=40, 558.28575pt x 436.029pt>
+
+<method.png, id=34, 558.28575pt x 436.029pt>
 File: method.png Graphic file (type png)
  <use method.png>
-Package pdftex.def Info: method.png used on input line 180.
+Package pdftex.def Info: method.png used on input line 175.
 (pdftex.def)             Requested size: 255.2497pt x 199.35156pt.
- [5 <./method.png>]
+ [4 <./coil_system.png>] [5 <./method.png>]
 <SimResults.png, id=47, 520.94624pt x 486.01575pt>
 File: SimResults.png Graphic file (type png)
  <use SimResults.png>
-Package pdftex.def Info: SimResults.png used on input line 215.
+Package pdftex.def Info: SimResults.png used on input line 219.
 (pdftex.def)             Requested size: 255.2497pt x 238.13496pt.
- [6 <./SimResults.png>] (JMRR_paper_Main_File.bbl
+ (JMRR_paper_Main_File.bbl [6 <./SimResults.png>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -352,17 +352,20 @@ Underfull \hbox (badness 7433) in paragraph at lines 46--49
 
 ) [7] (JMRR_paper_Main_File.aux)
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3482 strings out of 493333
- 45649 string characters out of 3139185
- 136861 words of memory out of 3000000
- 6944 multiletter control sequences out of 15000+200000
- 16858 words of font info for 63 fonts, out of 3000000 for 9000
+ 3483 strings out of 493333
+ 45664 string characters out of 3139185
+ 130009 words of memory out of 3000000
+ 6945 multiletter control sequences out of 15000+200000
+ 16557 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,17n,26p,1140b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,17n,26p,1140b,426s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -378,7 +381,7 @@ amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 /fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb>
-Output written on JMRR_paper_Main_File.pdf (7 pages, 933421 bytes).
+Output written on JMRR_paper_Main_File.pdf (7 pages, 933103 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
