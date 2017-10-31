@@ -8,18 +8,34 @@ Metin Sitti, Hakan Ceylan, Wenqi Hu, Joshua Giltinan, Mehmet Turan, Sehyuk Yim,
 
 \bibitem{mag1}
 SAJ Wiegers, J~Rook, A~den Ouden, JAAJ Perenboom, and JC~Maan.
-\newblock Design and construction of a 38 t resistive magnet at the nijmegen
-  high field magnet laboratory.
+\newblock Design and construction of a 38 {T} resistive magnet at the
+  {N}ijmegen high field magnet laboratory.
 \newblock {\em IEEE Transactions on Applied Superconductivity},
   22(3):4301504--4301504, 2012.
 
 \bibitem{mag2}
 Frans~JP Wijnen, Stef~AJ Wiegers, Jos~MH van Velsen, Jos Rook, Andries den
   Ouden, Jos~AAJ Perenboom, and Nigel~E Hussey.
-\newblock Construction and performance of a 38-t resistive magnet at the
-  nijmegen high field magnet laboratory.
+\newblock Construction and performance of a 38 {T} resistive magnet at the
+  {N}ijmegen high field magnet laboratory.
 \newblock {\em IEEE Transactions on Applied Superconductivity}, 26(4):1--5,
   2016.
+
+\bibitem{muzzi2011test}
+L~Muzzi, G~De~Marzi, C~Fiamozzi Zignani, U~Besi Vetrella, V~Corato, A~Rufoloni,
+  and Antonio della Corte.
+\newblock Test results of a {N}b{T}i wire for the {ITER} poloidal field
+  magnets:{ A} validation of the 2-pinning components model.
+\newblock {\em IEEE Transactions on Applied Superconductivity},
+  21(3):3132--3137, 2011.
+
+\bibitem{godeke2007limits}
+A~Godeke, D~Cheng, DR~Dietderich, P~Ferracin, SO~Prestemon, G~Sabbi, and
+  RM~Scanlan.
+\newblock Limits of {N}b{T}i and {N}b3{S}n, and development of {W\&R} {B}i-2212
+  high field accelerator magnets.
+\newblock {\em IEEE Transactions on Applied Superconductivity},
+  17(2):1149--1152, 2007.
 
 \bibitem{feigel1989theory}
 MV~Feigel’Man, VB~Geshkenbein, AI~Larkin, and VM~Vinokur.
