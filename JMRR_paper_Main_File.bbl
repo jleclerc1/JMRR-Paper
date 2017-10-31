@@ -6,6 +6,21 @@ Metin Sitti, Hakan Ceylan, Wenqi Hu, Joshua Giltinan, Mehmet Turan, Sehyuk Yim,
 \newblock Biomedical applications of untethered mobile milli/microrobots.
 \newblock {\em Proceedings of the IEEE}, 103(2):205--224, 2015.
 
+\bibitem{mag1}
+SAJ Wiegers, J~Rook, A~den Ouden, JAAJ Perenboom, and JC~Maan.
+\newblock Design and construction of a 38 t resistive magnet at the nijmegen
+  high field magnet laboratory.
+\newblock {\em IEEE Transactions on Applied Superconductivity},
+  22(3):4301504--4301504, 2012.
+
+\bibitem{mag2}
+Frans~JP Wijnen, Stef~AJ Wiegers, Jos~MH van Velsen, Jos Rook, Andries den
+  Ouden, Jos~AAJ Perenboom, and Nigel~E Hussey.
+\newblock Construction and performance of a 38-t resistive magnet at the
+  nijmegen high field magnet laboratory.
+\newblock {\em IEEE Transactions on Applied Superconductivity}, 26(4):1--5,
+  2016.
+
 \bibitem{feigel1989theory}
 MV~Feigel’Man, VB~Geshkenbein, AI~Larkin, and VM~Vinokur.
 \newblock Theory of collective flux creep.
@@ -13,24 +28,24 @@ MV~Feigel’Man, VB~Geshkenbein, AI~Larkin, and VM~Vinokur.
 
 \bibitem{ONOGI1989991}
 Toshiyuki Onogi, Tsuneo Ichiguchi, and Toshiyuki Aida.
-\newblock Power-law dissipative behavior in high-tc superconductor.
+\newblock Power-law dissipative behavior in high-{Tc} superconductor.
 \newblock {\em Solid State Communications}, 69(10):991 -- 993, 1989.
 
 \bibitem{0022-3727-3-4-308}
 W~T Norris.
-\newblock Calculation of hysteresis losses in hard superconductors carrying ac:
-  isolated conductors and edges of thin sheets.
+\newblock Calculation of hysteresis losses in hard superconductors carrying
+  {AC}: isolated conductors and edges of thin sheets.
 \newblock {\em Journal of Physics D: Applied Physics}, 3(4):489, 1970.
 
 \bibitem{brambilla2006development}
 Roberto Brambilla, Francesco Grilli, and Luciano Martini.
-\newblock Development of an edge-element model for ac loss computation of
+\newblock Development of an edge-element model for {AC} loss computation of
   high-temperature superconductors.
 \newblock {\em Superconductor Science and Technology}, 20(1):16, 2006.
 
 \bibitem{leclerc2016artificial}
 J~Leclerc, L~Makong Hell, C~Lorin, and PJ~Masson.
-\newblock Artificial neural networks for ac losses prediction in
+\newblock Artificial neural networks for {AC} losses prediction in
   superconducting round filaments.
 \newblock {\em Superconductor Science and Technology}, 29(6):065008, 2016.
 
