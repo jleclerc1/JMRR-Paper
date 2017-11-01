@@ -112,26 +112,44 @@ where $\vec{B_{\perp}}$ and $\vec{B_{\parallel}}$ are the components of the magn
 The magnetic field present on the superconductor is the sum of the external magnetic field and the self-magnetic field (magnetic field produced by the superconductor on itself). In some applications the first term may be zero. However, the self-magnetic field is always present and must be taken into account. \par
 Some superconducting materials exhibit \emph{anisotropic behaviors} where the reduction of the critical current density depends on the orientation of the magnetic field. In that case, the angle of the magnetic field must be taken into account during the calculations.\par
 The critical current density of superconducting tapes or wires is also affected by the mechanical stress it must withstand. Superconductor manufacturers provide the value of the critical tensile strength. For example, the Sumitomo BiSCCO type H tape has a critical tensile strength of 130 MPa. This value corresponds to the tensile strength that produces a decrease of 5\% of the critical current density. This value should not be exceeded.\par
-Superconductors are also sensitive to the bending radius. Each manufacturer provides a minimum bending radius. For example, the YBCO tape from Superpower Inc. can be bent to a radius of 5.5 mm.
+Superconductors are also sensitive to the bending radius. Each manufacturer provides a minimum bending radius. For example, the YBCO tape from Superpower Inc.\ can be bent to a radius of 5.5 mm.
 
 
 \section{AC losses}
 \label{ac}
-A time-varying magnetic field present on the superconductor produces an electric field which, together with the current density produces AC losses. To properly select the cryogenic cooling system, the amount of AC losses must be calculated. However, the highly non-linear behavior of superconductors makes the task difficult. Three options are currently available to calculate AC losses.\par
-The first method is based on analytical calculations \cite{0022-3727-3-4-308}. Models are derived from the critical state assumption which assume an infinite value for $n$. This leads to a calculation errors that are large for low $n$ values but decreases to zero when the value of $n$ tends to infinity. The main advantage of this method is that predictions are fast to compute.\par
-The second method is based on finite elements calculation \cite{brambilla2006development}. The local variables $E$ and $J$ must be calculated at each point of the superconductor as a function of the time. The amount of losses produced per period is obtained by integrating $E\cdot J$ over the total volume of superconductor and over a period of the input signal. This method is accurate but slow.\par
-The last possibility is to use empirical models based on FEM simulations. These models are built by fitting large amounts of data generated via FEM computation. In \cite{leclerc2016artificial} an artificial neural network was trained to fit losses data calculated for a superconducting filament submitted to a rotating, pulsating, or elliptical magnetic field. This type of model requires a long build time because many numerical simulations must be computed. However, once the parameters of the model are found, the predictions are fast and accurate.
+A time-varying magnetic field present on the superconductor produces an electric field that, together with the current density, produces AC losses. To properly select the cryogenic cooling system, the amount of AC losses must be calculated. However, the highly non-linear behavior of superconductors makes the task difficult. Three options are currently available to calculate AC losses.\par
+ The first method is based on analytical calculations \cite{0022-3727-3-4-308}. Models are derived from the critical state assumption which assume an infinite value for $n$. 
+ This leads to calculation errors that are large for low $n$ values but decrease to zero when the value of $n$ tends to infinity. 
+ The main advantage of this method is that predictions are fast to compute.\par
+The second method is based on finite element calculations \cite{brambilla2006development}. 
+ The local variables $E$ and $J$ must be calculated at each location on the superconductor as a function of time. 
+  The amount of losses produced per period is obtained by integrating $E\cdot J$ over the total volume of superconductor and over a period of the input signal. 
+  This method is accurate but slow.\par
+The last possibility is to use empirical models based on FEM simulations. 
+ These models are built by fitting large amounts of data generated via FEM computation. 
+  In \cite{leclerc2016artificial} an artificial neural network was trained to fit loss data calculated for a superconducting filament submitted to a rotating, pulsating, or elliptical magnetic field. 
+   This type of model requires a long build time because many numerical simulations must be computed. However, once the parameters of the model are found, the predictions are fast and accurate.
 
 \section{Cryogenic cooling system}
 
-Cooling methods for superconducting devices can be classified into two categories: cooling via a cryogenic liquid and cooling via a cryocooler. Figure \ref{system} is a schematic representation of two cooling methods for superconductors and a comparison with a natural convection-cooled resistive coil.\par
-Cryogenic fluids commonly used in superconductivity are liquid Helium (LHe, 4.2 K) and liquid Nitrogen (LN2, 77 K). Cryogenic liquids are usually used at their boiling temperature. This ensures that the system is working at a constant temperature. The heat is removed via the evaporation of the liquid. LHe, for example, has a latent heat of vaporization equal to 20.9 J/g at 4.2 K. That means that 1 g of LHe will evaporate to extract 20.9 J of heat. With this value and knowing the quantity of losses produced, the amount of liquid evaporated per unit time can be calculated. LHe is expensive (currently around 6 USD/l) and evaporated gas must be stored to be reliquified. On the other hand, LN2 is cheap (currently around 0.50 USD/l) and easy to handle.\par
-Cryocoolers are machines that use a thermodynamic cycle to generate low temperature. They have the advantage of being closed systems (no gas or liquid is lost). Unlike cooling with a cryogenic liquid, this system does not need regular refills. It only needs an electrical power supply to work. The coefficient of performance (COP) of cryocoolers is an important parameter. It is the ratio of the amount of heat extracted at cryogenic temperature and the amount of mechanical work needed. This characterizes the efficiency of the cooling system. The COP decreases when the working temperature decreases. For example, the AL125 refrigerator from Cryomech uses 3,900 W of electric power to extract 100 W of heat at 65K while the AL325, which is designed to work at lower temperature, uses 11,200 Wof electric power to extract the same heat at 25 K \cite{WinNT}. For systems producing a significant amount of AC losses, it is usually chosen to work with HTS rather than LTS to reduce the power consumption of the cooling system.\par
+Cooling methods for superconducting devices can be classified into two categories: cooling via a cryogenic liquid and cooling via a cryocooler. 
+ Figure \ref{system} is a schematic representation of these two cooling methods for superconductors and a comparison with a natural convection-cooled resistive coil.\par
+Cryogenic fluids commonly used in superconductivity are liquid helium (LHe, 4.2 K) and liquid nitrogen (LN2, 77 K). 
+ Cryogenic liquids are usually used at their boiling temperature. 
+  This ensures that the system is working at a constant temperature. 
+   The heat is removed via the evaporation of the liquid. 
+   LHe, for example, has a latent heat of vaporization equal to 20.9 J/g at 4.2 K. 
+   That means that 1 g of LHe will evaporate to extract 20.9 J of heat. 
+   With this value and knowing the quantity of losses produced, the amount of liquid evaporated per unit time can be calculated. 
+   LHe is expensive (currently around \$6 USD/l) and evaporated gas must be stored to be reliquified. 
+   In comparison, LN2 is cheap (currently around \$0.50 USD/l) and easy to handle.\par
+Cryocoolers are machines that use a thermodynamic cycle to generate low temperature. They have the advantage of being closed systems (no gas or liquid is lost). Unlike cooling with a cryogenic liquid, this system does not need regular refills. It only needs an electrical power supply to work. The coefficient of performance (COP) of cryocoolers is an important parameter. It is the ratio of the amount of heat extracted at cryogenic temperature and the amount of mechanical work needed. This characterizes the efficiency of the cooling system. The COP decreases when the working temperature decreases. For example, the AL125 refrigerator from Cryomech uses 3,900 W of electric power to extract 100 W of heat at 65K while the AL325, which is designed to work at lower temperature, uses 11,200~W of electric power to extract the same heat at 25~K \cite{WinNT}. 
+ For systems producing significant AC losses, HTS is preferred over LTS to reduce the cooling system's power consumption.\par
 There are three ways to thermally connect a superconducting coil to a cryocooler:
 \begin{itemize}[leftmargin=*]
 \item Thermal connection via conduction: the coil and the cold head of the cryocooler are placed under vacuum. A highly thermally conductive part connects the coil to the cold head. This part is often a copper braid with a large section.
-\item Thermal connection via convection: A cryogenic gas (usually Helium gas) circulates between the superconducting coil and the cryocooler cold head. A heat exchanger is present in both sides. A cryogenic fan is usually used to force the convection.
-\item  Thermal connection via boil off of cryogenic liquid: The superconducting coil is placed into a cryogenic liquid bath. The energy dissipated into the coil produces the evaporation of liquid. The cryocooler is used to re-condensate the evaporated liquid. This method is used in zero boil-off MRI scanners.
+\item Thermal connection via convection: A cryogenic gas (usually helium gas) circulates between the superconducting coil and the cryocooler cold head. A heat exchanger is present in both sides. A cryogenic fan is usually used to force the convection.
+\item  Thermal connection via boil-off of cryogenic liquid: The superconducting coil is placed into a cryogenic liquid bath. The energy dissipated into the coil produces the evaporation of liquid. The cryocooler is used to re-condensate the evaporated liquid. This method is used in zero boil-off MRI scanners.
 \end{itemize}
 
 \section{Design of a Superconducting Helmholtz coil system}
