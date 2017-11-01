@@ -147,16 +147,22 @@ Cryocoolers are machines that use a thermodynamic cycle to generate low temperat
  For systems producing significant AC losses, HTS is preferred over LTS to reduce the cooling system's power consumption.\par
 There are three ways to thermally connect a superconducting coil to a cryocooler:
 \begin{itemize}[leftmargin=*]
-\item Thermal connection via conduction: the coil and the cold head of the cryocooler are placed under vacuum. A highly thermally conductive part connects the coil to the cold head. This part is often a copper braid with a large section.
+\item Thermal connection via conduction: the coil and the cold head of the cryocooler are placed under vacuum. A highly thermally conductive part connects the coil to the cold head. This part is often a copper braid with a large cross-section.
 \item Thermal connection via convection: A cryogenic gas (usually helium gas) circulates between the superconducting coil and the cryocooler cold head. A heat exchanger is present in both sides. A cryogenic fan is usually used to force the convection.
 \item  Thermal connection via boil-off of cryogenic liquid: The superconducting coil is placed into a cryogenic liquid bath. The energy dissipated into the coil produces the evaporation of liquid. The cryocooler is used to re-condensate the evaporated liquid. This method is used in zero boil-off MRI scanners.
 \end{itemize}
 
-\section{Design of a Superconducting Helmholtz coil system}
+\section{Design of a superconducting Helmholtz coil system}
 \subsection{Magnetic field computation}
-As stated in section \ref{elec}, the critical current density of superconductors varies with the magnetic field. One therefore have to calculate its value. The system is axisymmetric. It was chosen to perform the calculations in a 2d axisymmetric coordinate system (see Fig. \ref{coils}). The total magnetic field is the sum of the external and self-magnetic field (see Section \ref{elec}). The external magnetic field depends on the environment. The self-magnetic field is produced by the coil itself and must be computed.\par
-Each coil has a total number of turns equal to $N$. A current $I_w$ circulates in the conductor. The current density averaged over the superconducting wire cross-section is $J_w=I_w/S_w$ where $S_w$ is the superconducting wire cross section area. The cross-section of the coil is composed of areas occupied by the superconducting wire and area occupied by insulating material. The filling factor of the coil is $C_{\textrm{ff}}=N\cdot S_w/((R_e-R_i)\cdot T)$ where $R_e$ and $R_i$ are the external and internal radius of the coils respectively and $T$ is the their thickness (see Fig. \ref{coils}).\par
-To perform the self-magnetic field calculation, the current density is averaged over the coil cross section i.e. the non-uniformity produced by the combination of insulating and conducting material on the current density is neglected.  
+As stated in Section \ref{elec}, the critical current density of superconductors varies with the magnetic field.
+  Therefore the critical current density must be calculated throughout the coil. 
+   The system is axisymmetric, so the calculations were performed in a 2d axisymmetric coordinate system (see Fig. \ref{coils}). 
+   The total magnetic field is the sum of the external and self-magnetic field (see Section \ref{elec}). 
+    The external magnetic field depends on the environment. The self-magnetic field is produced by the coil itself and must be computed.\par
+Each coil has a total number of turns equal to $N$. A current $I_w$ circulates in the conductor. The current density averaged over the superconducting wire cross-section is $J_w=I_w/S_w$ where $S_w$ is the superconducting wire cross section area. 
+The cross-section of the coil is composed of areas occupied by the superconducting wire and area occupied by insulating material. 
+The filling factor of the coil is $C_{\textrm{ff}}=N\cdot S_w/((R_e-R_i)\cdot T)$ where $R_e$ and $R_i$ are the external and internal radius of the coils respectively and $T$ is their thickness (see Fig. \ref{coils}).\par
+To perform the self-magnetic field calculation, the current density is averaged over the coil cross-section i.e.\ the non-uniformity produced by the combination of insulating and conducting material on the current density is neglected.  
 \begin{figurehere}
 	\begin{center}
 	\includegraphics[width=\linewidth]{coil_system.png}
@@ -164,29 +170,25 @@ To perform the self-magnetic field calculation, the current density is averaged 
 	\label{coils}
 	\end{center}
 \end{figurehere}
-The current density averaged over the coil cross section is denoted $J_a$ and is calculated with $J_a=C_{\textrm{ff}}.J_s$.\par 
-Each coil can be decomposed into a sum of infinitesimal current loop having a cross section $dr.dz$. The magnetic flux density $dB_z(R_p,Z_p,R_m,Z_m)$ and $dB_r(R_p,Z_p,R_m,Z_m)$ produced by a current loop can be calculated using the semi-analytical equations 3, 4, 5 and 6 \cite{simpson2001simple}. In these equations, the field calculation point is placed at coordinates $(R_m,0,Z_m)$ in the cylindrical coordinate system and the current loop is placed at $z=Z_p$ and has a radius $R_p$. The magnetic flux density produced by the complete coil is obtained by performing the integration of $dB_z(R_p,Z_p,R_m,Z_m)$ and $dB_r(R_p,Z_p,R_m,Z_m)$ over the coil cross section (see eq. 7 and 8).
+The current density averaged over the coil cross-section is denoted $J_a$ and is calculated with $J_a=C_{\textrm{ff}} \cdot J_s$.\par 
+Each coil can be decomposed into a sum of infinitesimal current loop having a cross section $dr\cdot dz$. The magnetic flux density $dB_z(R_p,Z_p,R_m,Z_m)$ and $dB_r(R_p,Z_p,R_m,Z_m)$ produced by a current loop can be calculated using the semi-analytical equations \ref{Bz1loop}, \ref{Br1loop}, \ref{delta}, and \ref{beta} \cite{simpson2001simple}. In these equations, the field calculation point is placed at coordinates $(R_m,0,Z_m)$ in the cylindrical coordinate system and the current loop is placed at $z=Z_p$ and has a radius $R_p$. The magnetic flux density produced by the complete coil is obtained by performing the integration of $dB_z(R_p,Z_p,R_m,Z_m)$ and $dB_r(R_p,Z_p,R_m,Z_m)$ over the coil cross-section (see eq. \ref{Bztot} and \ref{Brtot}).
 
 \begin{align}
 \begin{split}
-dB_z(R_p,Z_p,R_m,Z_m) =&\frac{\mu _0I}{2\pi\delta ^{2}\beta  }( [ \left ( R_p^2-R_m ^2-(Zm-Zp)^2 \right )\\
-&.(E(k^2)+\delta ^2K(k^2)) ) ]
-\end{split}
-\label{Bz1loop}\\
+dB_z(R_p,Z_p,R_m,Z_m) =&\frac{\mu _0I}{2\pi\delta ^{2}\beta  } \left( R_p^2-R_m ^2- \left(Zm-Zp\right)^2 \right)\\
+& \cdot \left(E\left(k^2\right)+\delta ^2K\left(k^2\right)\right)  \label{Bz1loop}
+\end{split}\\
 \begin{split}
-dB_r(R_p,Z_p,R_m,Z_m) =&\frac{\mu _0 I \cdot (Zm-Zp)}{2\pi\delta ^{2}\beta R_m   }( [ \left ( R_p^2-R_m ^2-z^2 \right )\\
-&.(E(k^2)-\delta ^2K(k^2))) ]
+dB_r(R_p,Z_p,R_m,Z_m) =&\frac{\mu _0 I \cdot (Zm-Zp)}{2\pi\delta ^{2}\beta R_m   } \left( R_p^2-R_m ^2-z^2 \right)\\
+&  \cdot  \left(E(k^2)-\delta ^2K(k^2)\right) \label{Br1loop}
 \end{split}
 \end{align}
 \begin{align}
-%\label{Bteta1loop}\\
-&\delta =\sqrt{R_p^2+R_m^2+(Z_m-Z_p)^2-2R_pR_m}
-\label{delta}\\
-&\beta =\sqrt{R_p^2+R_m^2+(Z_m-Zp)^2+2R_pR_m}
-\label{beta}\\
-&B_z(R_m,Z_m)=\int_{d}^{d+T}\int_{R_i}^{R_e}dB_z((R_p,Z_p,R_m,Z_m))dR_pdZ_p\\
+&\delta =\sqrt{R_p^2+R_m^2+(Z_m-Z_p)^2-2R_pR_m} \label{delta}\\
+&\beta =\sqrt{R_p^2+R_m^2+(Z_m-Zp)^2+2R_pR_m} \label{beta}\\
+&B_z(R_m,Z_m)=\!\!\int_{d}^{d+T}\!\!\!\!\int_{R_i}^{R_e}\!\!\!dB_z(R_p,Z_p,R_m,Z_m)dR_pdZ_p  \label{Bztot}\\
 %\label{Bztot}\\
-&B_r(R_m,Z_m)=\int_{d}^{d+T}\int_{R_i}^{R_e}dB_r((R_p,Z_p,R_m,Z_m))dR_pdZ_p
+&B_r(R_m,Z_m)=\!\!\int_{d}^{d+T}\!\!\!\!\int_{R_i}^{R_e}\!\!\!dB_r(R_p,Z_p,R_m,Z_m)dR_pdZ_p \label{Brtot}
 %\label{Brtot}\\
 \end{align}
 \begin{figurehere}
@@ -228,7 +230,7 @@ W=\frac{2\mu_0a^2Jc^2}{3}\left ( \left (\frac{3\left |B  \right |}{\mu_0aJc}-2  
 \subsection{Practical example}
 
 Assume we want to calculate an Helmholtz coil system that produces a magnetic flux density of 1.5 T in its center and that is large enough to accommodate a person. The internal diameter of the coils is chosen to be equal to 0.7 m. The distance between the coils $d$ is imposed to be 0.4 m. A square cross-section for the coils is also imposed i.e. $R_e-R_i=T$. The only parameter that can be adjusted to obtain the desired flux density is therefore the length of the side of the square cross-section $T$. A security factor will be taken on the maximum current value: the coil will be designed to produce 1.875T at the critical current value. At 1.5 T the current in the coil will be equal to 80\% of the critical value.\par
-The material considered in this study is the DI-BiSCCO tape manufactured by Sumitomo Electric Industries. Its critical current density field dependency is modeled by eq. \ref{model2}. At 30K, $J_{c0}$ is approximately equal to 500e6~A/m and $B_0$ is approximately equal to 3 T. These values have been obtained by approximating data provided by Sumitomo Electric Industries. This model takes into account the effect of the magnetic field angle with respect to the tape plane. $B_{\perp}$ is the component of the flux density perpendicular to the tape surface (called a-b plane) and $B_{\parallel}$ is the component parallel to the tape surface (c-axis). The parameter $y$ characterizing the anisotropy of the superconductor is assumed to be equal to 10 as in section \ref{aclosses}.\par
+The material considered in this study is the DI-BiSCCO tape manufactured by Sumitomo Electric Industries. Its critical current density field dependency is modeled by eq. \ref{model2}. At 30K, $J_{c0}$ is approximately equal to 500e6~A/m and $B_0$ is approximately equal to 3 T. These values have been obtained by approximating data provided by Sumitomo Electric Industries. This model takes into account the effect of the magnetic field angle with respect to the tape plane. $B_{\perp}$ is the component of the flux density perpendicular to the tape surface (called a-b plane) and $B_{\parallel}$ is the component parallel to the tape surface (c-axis). The parameter $y$ characterizing the anisotropy of the superconductor is assumed to be equal to 10 as in Section \ref{aclosses}.\par
 These values were entered into the provided \MATLAB ~graphical interface and the computation of the coil geometry was performed. The result of the calculation is presented in fig. \ref{Results}. In this figure, part a) shows the obtained flux density at maximum current. The flux density has a value of 1.87 T, close to the target. The next plot, b), shows a map of the ratio $J_w/Jc$. The maximum value is 1 which shows that the maximum current density is reached without exceeding it. The last graph, c), shows a map of the losses produced in the winding during each cycle. The losses are larger on the sides of the coils. Indeed, at these locations, the magnetic field has a stronger perpendicular component and, accordingly to the model used (eq. \ref{Weq}), more losses are generated there. The total losses obtained are equal to 16,427 J.cycle$^{-1}$ and the value for T is 0.17 m.
 \section{Conclusion}
 Superconductors could be used advantageously to control magnetically actuated robots because of their high current density capabilities and low losses. They could enable drastically reducing the size of the system while improving its energy efficiency. Superconductors must be cooled at cryogenics temperature. Using cryogenic liquids such as liquid nitrogen (77K) or liquid helium (4.2K) is a possible solution. Cryocoolers can also be used to cool superconductors via conduction heat transfer or reliquefaction of the cryogenic fluid.\par 
