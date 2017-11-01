@@ -200,28 +200,48 @@ dB_r(R_p,Z_p,R_m,Z_m) =&\frac{\mu _0 I \cdot (Zm-Zp)}{2\pi\delta ^{2}\beta R_m  
 \end{figurehere}
 \subsection{Critical current density computation}
 \label{jccalc}
-It is first necessary to clarify the difference between the local critical current density $J_c$ and the coil critical current density $J_{\textrm{cc}}$. At each point on the coil, the superconductor is subjected to a different magnetic field $B(R_m,Z_m)$ \cite{linares2016design}. The critical current is a function of the magnetic field as shown in the model presented in eq. \ref{model1}. Therefore, at each location of the coil, a value for $J_c(B)$ can be calculated. It correspond to the maximum current density the superconductor can carry \textbf{at this point}. On the other hand, the value of $J_{\textrm{cc}}$ corresponds to the maximum current density the conductor of \textbf{the complete coil} can carry.\par
-In the considered Helmholtz coil problem, the only sources of magnetic field are the coils of the system. There is no external magnetic field. The two coils are connected in series and are therefore sharing the same current. The magnetic field present on the Helmholtz coils system is thus proportional to the current and is classified as self-magnetic field.\par
-$J_w$ is constant in the in the winding since it is made with a single conductor. Therefore, much like with the weak chain link problem, the maximum current density $J_{\textrm{cc}}$ that the coil can carry correspond to the minimum $J_c$ value encountered in the winding when $J_w=\textrm{min}(J_c)$. The problem is not straightforward to solve: a change in the value of $J_w$ produces a change in $\textrm{min}(J_c)$ which define the maximum value for $J_w$. An iterative calculation is therefore needed to find $J_{\textrm{cc}}$ (see fig. \ref{method} (b)).\par
-The method used to solve this problem is the following: first, a starting value $J_{w0}$ is chosen for $J_{w}$. The magnetic field produced at this current is calculated. From this results, $J_c$ is calculated over the coils cross section. $\textrm{min}(Jc)$ is compared to $J_w$. If $J_w>\textrm{min}(J_c)$ the current density $J_w$ needs to be decreased in the next iteration. If $J_w<\textrm{min}(J_c)$ the current density $J_w$ needs to be increased in the next iteration. The process is repeated until the condition $J_w=\textrm{min}(J_c)$ is satisfied (or close to be satisfied) and therefore $J_{\textrm{cc}}$ is found.\par
+It is first necessary to clarify the difference between the local critical current density $J_c$ and the coil critical current density $J_{\textrm{cc}}$. 
+ At each point on the coil, the superconductor is subjected to a different magnetic field $B(R_m,Z_m)$ \cite{linares2016design}. 
+ The critical current is a function of the magnetic field as shown in the model presented in eq. \ref{model1}. 
+ Therefore, at each location of the coil, a value for $J_c(B)$ can be calculated. 
+ It corresponds to the maximum current density the superconductor can carry \textbf{at this point}. 
+ However, the value of $J_{\textrm{cc}}$ corresponds to the maximum current density \textbf{the complete coil} can carry.\par
+In the Helmholtz coil problem considered, the only sources of magnetic field are the coils of the system. 
+ There is no external magnetic field. 
+ The two coils are connected in series and are therefore sharing the same current. 
+ The magnetic field present on the Helmholtz coils system is thus proportional to the current and is classified as the self-magnetic field.\par
+$J_w$ is constant in the winding since it is made with a single conductor. 
+Therefore,  like the weakest link in a chain, the maximum current density $J_{\textrm{cc}}$ the coil can carry corresponds to the minimum $J_c$ value encountered in the winding when $J_w=\textrm{min}(J_c)$. 
+ The problem is not straightforward to solve: a change in the value of $J_w$ produces a change in $\textrm{min}(J_c)$ which in turn defines the maximum value for $J_w$. 
+  An iterative calculation is therefore needed to find $J_{\textrm{cc}}$ (see fig. \ref{method} (b)).\par
+The method used to solve this problem is the following: first, a starting value $J_{w_0}$ is chosen for $J_{w}$. 
+The magnetic field produced at this current is calculated. 
+ From this results, $J_c$ is calculated over the coil's cross section. $\textrm{min}(J_c)$ is compared to $J_w$. If $J_w>\textrm{min}(J_c)$ the current density $J_w$ needs to be decreased in the next iteration. If $J_w<\textrm{min}(J_c)$ the current density $J_w$ needs to be increased in the next iteration. The process is repeated until the condition $J_w=\textrm{min}(J_c)$ is satisfied (or approximately satisfied) and therefore $J_{\textrm{cc}}$ is found.\par
 This algorithm was implemented in the provided \MATLAB ~function \emph{JcSearch.m}. The optimization algorithm \texttt{fminsearch} was used to search $J_{\textrm{cc}}$.\par
-Electromagnetic engineering problems often start with magnetic field requirements and some geometry constraint. Here, the case where a magnetic flux density $B_{\textrm{obj}}$ needs to be generated at the center of the system will be solved. Additional geometric constraints are, imposed values for $R_i$ and $d$ and, a square cross section for the coils i.e. $R_e-R_i=T$. The only parameter that can be adjusted is $T$.\par
+Electromagnetic engineering problems often start with magnetic field requirements and some geometry constraints. 
+This problem will require a magnetic flux density $B_{\textrm{obj}}$ be generated at the center of the system. Additional geometric constraints are imposed values for $R_i$ and $d$ and a square cross-section for the coils i.e. $R_e-R_i=T$. The only parameter that can be adjusted is $T$.\par
 
 \subsection{Coil geometry optimization}
-An optimization algorithm is used to find the correct value of $T$ (see fig. \ref{method} (a)). An initial value must first be chosen. In the provided code, the initial value is equal to $R_i$. Then, the developed \MATLAB ~function \emph{JcSearch.m} described in \ref{jccalc} is used to compute $J_{\textrm{cc}}$. The magnetic flux density can then easily be calculated at the center of the system for this current density value. The optimization algorithm compares the obtained field with the objective value. It then modify the value for $T$ and iterates the process until a satisfactory field value is found. The optimization algorithm used is the function \texttt{fminsearch} of \MATLAB. It uses the Nelder-Mead simplex algorithm \cite{lagarias1998convergence} to generate the values for $T$. The cost function it minimizes is presented in eq. \ref{CostFct} where $B(T)$ is the magnitude of the flux density at the system center and at critical current value for a give value for T. The coil geometry optimization was implemented in the provided \MATLAB ~function \emph{TSearch.m}.
+An optimization algorithm is used to find the correct value of $T$ (see fig. \ref{method} (a)). An initial value must first be chosen. In the provided code, the initial value is equal to $R_i$. Then, the developed \MATLAB ~function \emph{JcSearch.m} described in Section \ref{jccalc} is used to compute $J_{\textrm{cc}}$. The magnetic flux density can then easily be calculated at the center of the system for this current density value. The optimization algorithm compares the obtained field with the objective value. 
+It then modifies the value for $T$ and iterates the process until a satisfactory field value is found. 
+ The optimization algorithm used is the function \texttt{fminsearch} of \MATLAB. 
+ It uses the Nelder-Mead simplex algorithm \cite{lagarias1998convergence} to generate the values for $T$. 
+  The cost function it minimizes is presented in eq. \ref{CostFct} where $B(T)$ is the magnitude of the flux density at the system center and at critical current value for a given value of $T$. The coil geometry optimization was implemented in the provided \MATLAB ~function \emph{TSearch.m}.
 
 \begin{align}
 \textrm{CostFct}(T)=\left ( B(T)-B_{\textrm{obj}} \right )^{2}
 \label{CostFct}
 \end{align}
 
-\subsection{AC Losses computation}
+\subsection{AC losses computation}
 \label{aclosses}
-The results from the magnetic field computation and critical current density can be used to evaluate the superconducting magnetization AC loses (see Section \ref{ac}). An analytical model was used to perform this calculation. The model considered is presented in \cite{zhang2003angular} and eq. \ref{Weq} where $2\cdot a$ is the width of the superconducting tape and $y$ is the parameter characterizing the anisotropy of the superconductors. The applied current and magnetic field are sinusoidal. The authors of this model based their calculations on the critical state assumption \cite{bean1962magnetization} and take into account the effect of the magnetic field angle. To test their model they calculated losses for a BiSCCO tape and used a value of 10 for $y$. \par
-The unit of the obtained magnetization losses $W$ is J.m\textsuperscript{-3}.cycle\textsuperscript{-1}. It corresponds to the energy dissipated into 1~m\textsuperscript{3} of superconductor during one period of the signal. It is independent of the frequency $f$. The power $P$ (in Watts) dissipated in 1~m\textsuperscript{3} of superconductor can be easily calculated with $P=W\cdot f$. 
+The results from the magnetic field computation and critical current density can be used to evaluate the superconducting magnetization AC losses (see Section \ref{ac}). 
+ An analytical model was used to perform this calculation. 
+  The model considered is presented in \cite{zhang2003angular} and eq. \ref{Weq} where $2\cdot a$ is the width of the superconducting tape and $y$ is the parameter characterizing the anisotropy of the superconductors. The applied current and magnetic field are sinusoidal. The authors of this model based their calculations on the critical state assumption \cite{bean1962magnetization} and account for the effect of the magnetic field angle. To test their model they calculated losses for a BiSCCO tape and used a value of 10 for $y$. \par
+The units of the obtained magnetization losses $W$ is J$\cdot$m\textsuperscript{-3}$\cdot$cycle\textsuperscript{-1}. It corresponds to the energy dissipated into 1~m\textsuperscript{3} of superconductor during one period of the signal. It is independent of the frequency $f$. The power $P$ (in Watts) dissipated in 1~m\textsuperscript{3} of superconductor can be easily calculated with $P=W\cdot f$. 
 \begin{align}
 \begin{split}
-W=\frac{2\mu_0a^2Jc^2}{3}\left ( \left (\frac{3\left |B  \right |}{\mu_0aJc}-2  \right  )+\left (\frac{\left |B  \right |}{\mu_0aJc}+\frac{2J}{Jc}  \right )\frac{J}{Jc}\right ) \\ \left ( y^2\cos^2(\alpha )+\sin^2(\alpha ) \right )
+W=\frac{2\mu_0a^2Jc^2}{3}\left( \left(\frac{3\left|B  \right|}{\mu_0aJc}-2  \right)+\left(\frac{\left|B  \right|}{\mu_0aJc}+\frac{2J}{Jc}  \right)\frac{J}{Jc}\right) \\ \cdot \left( y^2\cos^2(\alpha )+\sin^2(\alpha ) \right)
 \label{Weq}
 \end{split}
 \end{align}
