@@ -249,11 +249,30 @@ W=\frac{2\mu_0a^2Jc^2}{3}\left( \left(\frac{3\left|B  \right|}{\mu_0aJc}-2  \rig
 
 \subsection{Practical example}
 
-Assume we want to calculate an Helmholtz coil system that produces a magnetic flux density of 1.5 T in its center and that is large enough to accommodate a person. The internal diameter of the coils is chosen to be equal to 0.7 m. The distance between the coils $d$ is imposed to be 0.4 m. A square cross-section for the coils is also imposed i.e. $R_e-R_i=T$. The only parameter that can be adjusted to obtain the desired flux density is therefore the length of the side of the square cross-section $T$. A security factor will be taken on the maximum current value: the coil will be designed to produce 1.875T at the critical current value. At 1.5 T the current in the coil will be equal to 80\% of the critical value.\par
-The material considered in this study is the DI-BiSCCO tape manufactured by Sumitomo Electric Industries. Its critical current density field dependency is modeled by eq. \ref{model2}. At 30K, $J_{c0}$ is approximately equal to 500e6~A/m and $B_0$ is approximately equal to 3 T. These values have been obtained by approximating data provided by Sumitomo Electric Industries. This model takes into account the effect of the magnetic field angle with respect to the tape plane. $B_{\perp}$ is the component of the flux density perpendicular to the tape surface (called a-b plane) and $B_{\parallel}$ is the component parallel to the tape surface (c-axis). The parameter $y$ characterizing the anisotropy of the superconductor is assumed to be equal to 10 as in Section \ref{aclosses}.\par
-These values were entered into the provided \MATLAB ~graphical interface and the computation of the coil geometry was performed. The result of the calculation is presented in fig. \ref{Results}. In this figure, part a) shows the obtained flux density at maximum current. The flux density has a value of 1.87 T, close to the target. The next plot, b), shows a map of the ratio $J_w/Jc$. The maximum value is 1 which shows that the maximum current density is reached without exceeding it. The last graph, c), shows a map of the losses produced in the winding during each cycle. The losses are larger on the sides of the coils. Indeed, at these locations, the magnetic field has a stronger perpendicular component and, accordingly to the model used (eq. \ref{Weq}), more losses are generated there. The total losses obtained are equal to 16,427 J.cycle$^{-1}$ and the value for T is 0.17 m.
+Assume we want to calculate a Helmholtz coil system that produces a magnetic flux density of 1.5 T in its center and that is large enough to accommodate a person. 
+ The internal diameter of the coils is chosen to be equal to 0.7 m. The distance between the coils $d$ is imposed to be 0.4 m. 
+  A square cross-section for the coils is also imposed i.e. $R_e-R_i=T$. 
+  The only parameter that can be adjusted to obtain the desired flux density is therefore the length of the side of the square cross-section $T$. 
+  A security factor will be taken on the maximum current value: the coil will be designed to produce 1.875T at the critical current value. 
+   At 1.5 T the current in the coil will be equal to 80\% of the critical value.\par
+The material considered in this study is the DI-BiSCCO tape manufactured by Sumitomo Electric Industries. 
+Its critical current density field dependency is modeled by eq. \ref{model2}. 
+At 30~K, $J_{c_0}$ is approximately equal to 500e6~A/m and $B_0$ is approximately equal to 3 T. 
+ These values were obtained by approximating data provided by Sumitomo Electric Industries. 
+  This model takes into account the effect of the magnetic field angle with respect to the tape plane. 
+   $B_{\perp}$ is the component of the flux density perpendicular to the tape surface (called a-b plane) and $B_{\parallel}$ is the component parallel to the tape surface (c-axis). 
+    The parameter $y$ characterizing the anisotropy of the superconductor is assumed to be equal to 10 as in Section \ref{aclosses}.\par
+These values were entered into the provided \MATLAB ~graphical interface and the computation of the coil geometry was performed.
+ The result of the calculation is presented in fig. \ref{Results}. 
+ In this figure, part a) shows the obtained flux density at maximum current. 
+  The flux density has a value of 1.87 T, close to the target. 
+  The next plot, b), shows a map of the ratio $J_w/J_c$. The maximum value is 1 which shows that the maximum current density is reached without exceeding it. 
+  The last graph, c), shows a map of the losses produced in the winding during each cycle. 
+   The losses are larger on the sides of the coils because the magnetic field has a stronger perpendicular component and, accordingly to the model used (eq. \ref{Weq}), more losses are generated there. The total losses obtained are equal to 16,427 J$\cdot$cycle$^{-1}$ and the value for $T$ is 0.17 m.
 \section{Conclusion}
-Superconductors could be used advantageously to control magnetically actuated robots because of their high current density capabilities and low losses. They could enable drastically reducing the size of the system while improving its energy efficiency. Superconductors must be cooled at cryogenics temperature. Using cryogenic liquids such as liquid nitrogen (77K) or liquid helium (4.2K) is a possible solution. Cryocoolers can also be used to cool superconductors via conduction heat transfer or reliquefaction of the cryogenic fluid.\par 
+Superconductors could be used advantageously to control magnetically actuated robots because of their high current density capabilities and low losses.
+ They could enable drastically reducing the size of the system while improving its energy efficiency. Superconductors must be cooled at cryogenics temperature. Using cryogenic liquids such as liquid nitrogen (77~K) or liquid helium (4.2~K) is a possible solution. 
+ Cryocoolers can also be used to cool superconductors via conduction heat transfer or reliquefaction of the cryogenic fluid.\par 
 \begin{figurehere}
 	\begin{center}
 	\includegraphics[width=\linewidth]{SimResults.png}
@@ -265,10 +284,17 @@ Superconductors could be used advantageously to control magnetically actuated ro
 \vspace{-0.5cm}
 
 
-A method to design superconducting magnetic systems for microrobotics applications was presented. The design method uses an iterative algorithm to find the critical current of superconducting coils. The self-magnetic field is computed and its effect is taken into account. An optimization method able to find the geometry of a Helmholtz coil system to produce a user defined magnetic field was programed. The \MATLAB ~code and a graphical interface is attached to this paper and available for download.\par
-Robotics applications often require fast changing magnetic fields. Under these conditions, AC losses are generated inside the superconductors. These losses must be carefully evaluated to ensure the proper sizing of the cryogenic cooling equipment.\par
-The \MATLAB ~program was tested to design an Helmholtz coil system able to generate 1.5T at its center. The optimum geometry was obtained and data about AC losses were computed.\par
-Future work should include experimental measurements of AC losses in a superconducting magnetic system. A high-fidelity model for AC losses computation based on finite elements should also be implemented.
+A method to design superconducting magnetic systems for microrobotics applications was presented. 
+ The design method uses an iterative algorithm to find the critical current of superconducting coils. 
+  The self-magnetic field is computed and its effect is taken into account. 
+  An optimization method able to find the geometry of a Helmholtz coil system to produce a user defined magnetic field was programed. 
+  The \MATLAB ~code and a graphical interface is attached to this paper and available for download.\par
+Robotics applications often require fast changing magnetic fields.
+ Under these conditions, AC losses are generated inside the superconductors. 
+ These losses must be carefully evaluated to ensure the proper sizing of the cryogenic cooling equipment.\par
+The \MATLAB ~program was tested to design an Helmholtz coil system able to generate 1.5~T at its center. The optimum geometry was obtained and data about AC losses were computed.\par
+Future work should include experimental measurements of AC losses in a superconducting magnetic system.
+ A high-fidelity model for AC losses computation based on finite elements should also be implemented.
 
 \bibliographystyle{unsrt}
 \bibliography{biblio}
@@ -276,3 +302,6 @@ Future work should include experimental measurements of AC losses in a supercond
 
 \end{multicols} 
 \end{document}
+
+
+
